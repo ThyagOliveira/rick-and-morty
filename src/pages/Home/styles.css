@@ -1,0 +1,7 @@
+.homeContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #202329;
+}
