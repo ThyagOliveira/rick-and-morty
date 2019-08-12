@@ -13,9 +13,6 @@ class Home extends Component {
     }
     componentDidMount() {
         this.loadCharacters()
-        api.loadCharacterPerPage(1).then((response) => {
-            console.log(response)
-        })
     }
     
     loadCharacters = async () => {
@@ -28,8 +25,8 @@ class Home extends Component {
         console.log(response)
     }
     render() {
-        return(
-            <div className="container">
+        return(                            
+            <div className="homeContainer">
                 {
                     this.state.characters.map(element => (
                         <Card

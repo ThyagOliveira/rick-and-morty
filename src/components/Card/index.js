@@ -4,9 +4,9 @@ import './styles.css'
 class Card extends Component {
     render() {
         return(
-            <div className="card">
-                    <img className="image" alt="Character" src={this.props.source} />                    
-                <div className="container">                                        
+            <div className="cardStyle">
+                <img className="image" alt="Character" src={this.props.source} />                    
+                <div className="cardContainer">                                        
                     <h4><b>{this.props.name}</b></h4> 
                     <p>ID: {this.props.id}</p>                                         
                     <p>Status: {this.props.status}</p>
