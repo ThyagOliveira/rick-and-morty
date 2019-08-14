@@ -12,7 +12,7 @@ class Home extends Component {
         }
     }
     componentDidMount() {
-        this.loadCharacterPerPage()
+        this.loadCharacterRandom()
     }
     
     loadCharacters = async () => {
@@ -20,11 +20,17 @@ class Home extends Component {
         this.setState({ characters: response.data.results })        
     }
 
-    loadCharacterPerPage = async () => {
+    loadCharacterRandom = async () => {
         let page = Math.floor((Math.random() * 25) + 1)
         const response = await api.loadCharacterPerPage(page)
         this.setState({ characters: response.data.results })
     }
+
+    loadCharacterPerPage = () => {        
+        const response =  api.loadCharacterPerPage()
+        this.setState({ characters: response.data.results })
+    }
+
     render() {
         return(                            
             <div className="homeContainer">
