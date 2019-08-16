@@ -12,8 +12,11 @@ class Card extends Component {
                     <p>Status <span>{this.props.status}</span> </p>
                     <p>Espécie <span>{this.props.species}</span> </p>
                     <p>Gênero <span>{this.props.gender}</span> </p>
-                    <p>Origem <span>{this.props.origin.split(" (Replacement Dimension)")}</span> </p>
-                    <p>Última <br/> Localização <span>{this.props.location.split(" (Replacement Dimension)")}</span> </p>
+                    <p>Origem <span style={{ textAlign: "right" }}>{this.props.origin}</span> </p>
+                    <p style={{ borderBottom: "transparent" }}>
+                        Última <br/> Localização 
+                        <span style={{ textAlign: "right" }}>{this.props.location}</span> 
+                    </p>
                 </div>                
             </article>
         )
