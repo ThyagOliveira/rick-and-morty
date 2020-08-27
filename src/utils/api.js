@@ -6,12 +6,12 @@ const server = axios.create({
 
 
 const loadCharacters = () => server.get('character/')
-const loadCharacterPerPage = (page) => server.get('character/?page=' + page )
+const loadCharacterPage = (page) => server.get('character/?page=' + page )
 const loadEpisode = () => server.get('episode/')
 
 const api = {
     loadCharacters,    
-    loadCharacterPerPage,
+    loadCharacterPage,
     loadEpisode,
 }
 
