@@ -6,7 +6,9 @@ import registerServiceWorker from './registerServiceWorker'
 
 
 ReactDOM.render(
-    <App />
-    , document.getElementById('root')
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>, 
+    document.getElementById('root')
 )
 registerServiceWorker()
